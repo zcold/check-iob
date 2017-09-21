@@ -76,6 +76,8 @@ class CheckIobCommand(sublime_plugin.TextCommand):
         psize = r'((?:[ ]+\[.+\])*)'
         pattern = re.compile('(' + space.join(['^', io, pwidth, name, psize]) + ')', flags=re.MULTILINE)
         self.port_list = []
+        class Port(object):
+            pass
         for line in pattern.findall(self.sv_source):
             port = Port()
             port.io, port.width, port.name, port.size = line[1:]
