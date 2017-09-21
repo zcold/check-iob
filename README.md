@@ -1,2 +1,1 @@
-# check-iob
-Check iob gray box
+# Check iob
